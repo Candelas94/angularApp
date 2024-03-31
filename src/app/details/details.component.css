@@ -1,0 +1,18 @@
+.filmDetailsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin-left: 20%;
+}
+
+.poster {
+    width: 400px;
+    height: auto;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    box-shadow: 3px 6px 26px 3px rgba(0,0,0,0.43);
+}
+
+.filmInfo {
+    text-align: left; /* Alinea el texto a la izquierda */
+}

@@ -1,0 +1,23 @@
+<div id="container" style="display: flex;">
+    <!-- <div id="header">
+        <h1>TMDB</h1>
+    </div> -->
+    <div id="search">
+            <input id="inputSearchFilm" type="text" placeholder="Search by name" #filter (keydown.enter)="filterResult(filter.value)">
+            <button id="btnSearch" type="button"(click)="filterResult(filter.value)">Search</button>
+    </div>
+</div>
+
+<div class="results">
+    <div class="filmRow">
+        @for(film of filmsList; track film.id)
+        {
+            <a [routerLink]="['/details', film.id]" class="filmLink">
+                <div class="filmCont">
+                    <img class="poster" src={{film.poster}} alt="{{film.name}}"/>
+                    <span>{{film.name}}, ({{film.year}})</span>
+                </div>
+            </a>
+        }
+    </div>
+</div>

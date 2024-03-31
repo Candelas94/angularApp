@@ -1,0 +1,56 @@
+#results{
+margin-left: 35%;
+}
+
+#inputSearchFilm{
+    width: 150px;
+    height: 30px;
+    background:none;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+#btnSearch
+{
+    margin-left: 5px;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    height: 33px;
+    border-radius: 8px;
+}
+#container{margin-left: 40%;}
+#search{
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.results {
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.filmRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px
+}
+
+.filmLink {
+    text-decoration: none;
+}
+
+.filmCont {
+    margin: 5px;
+    width: 180px;
+    text-align: center;
+}
+
+.poster {
+    width: 100%;
+    height: auto;
+}
