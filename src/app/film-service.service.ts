@@ -23,9 +23,9 @@ export class FilmServiceService {
     };
     return this.http.get<any>(apiUrl, options).pipe(
       map(response => {
-        this.filmList = this.mapResponseToFilms(response); // Actualiza la lista de películas con los datos de la API
+        this.filmList = this.mapResponseToFilms(response);
         console.log('response', response);
-        return this.filmList; // Devuelve la lista de películas
+        return this.filmList;
       })
     );
   }
@@ -55,14 +55,12 @@ export class FilmServiceService {
   }
 
   private mapResponseToFilm(response: any): ISingleFilm {
-    console.log('responseeeeeeeeeeeeeeeeeeeeeee', response);
-    // const result = response.movie_results[0]; // Obtén el primer resultado de la respuesta
     return {
       id: response.id,
       name: response.original_title,
       year: (new Date(response.release_date)).getFullYear(),
       description: response.overview,
-      poster: `https://image.tmdb.org/t/p/w500/${response.poster_path}` // URL del póster de la película
+      poster: `https://image.tmdb.org/t/p/w500/${response.poster_path}`
     };
   }
 
